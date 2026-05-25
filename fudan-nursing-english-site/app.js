@@ -1,9 +1,9 @@
 const scoreParts = [
-  ["10分", "英语知识运用", "护理学考研公共英语里的完形部分。重点是上下文逻辑、词义辨析、固定搭配和篇章衔接。"],
-  ["40分", "阅读理解 A", "英语一最大分值区。训练文章会偏护理、医学、公共健康和科研阅读场景。"],
+  ["10分", "英语知识运用", "完形部分。重点是上下文逻辑、词义辨析、固定搭配和篇章衔接。"],
+  ["40分", "阅读理解 A", "英语一最大分值区。训练文章以教育、科技、经济、社会、文化、科研等通用题材为主。"],
   ["10分", "阅读理解 B", "新题型。常见考查段落结构、句子衔接、标题匹配和排序。"],
   ["10分", "英译汉", "长难句翻译。先拆主干，再处理从句、非谓语、插入语和抽象名词。"],
-  ["30分", "写作", "小作文 10 分，大作文 20 分。护理方向重点积累健康、老龄化、职业伦理、科研和公共服务表达。"],
+  ["30分", "写作", "小作文 10 分，大作文 20 分。先掌握通用图画/图表表达，再补充健康、老龄化等可迁移素材。"],
 ];
 
 const routines = [
@@ -19,9 +19,9 @@ const knowledge = [
     points: [
       "每个词至少记 3 件事：核心义、常见搭配、在句子里的语气。",
       "考研阅读常用熟词生义：practice 不一定是练习，也可以是实践；address 不只是地址，也可以是处理问题。",
-      "她考护理学，所以要优先背 clinical、intervention、evidence、outcome、adherence 这类能在医学科研文章里反复出现的词。",
+      "护理学考研英语不是护理专业英语，单词主线仍是通用考研词汇；医学健康词只作为阅读题材补充。",
     ],
-    task: "每天把最难的 3 个词各造 1 句，句子尽量贴近护理场景。",
+    task: "每天把最难的 3 个词各造 1 句，优先用教育、科技、社会、研究等通用语境。",
   },
   {
     title: "长难句四步法",
@@ -31,7 +31,7 @@ const knowledge = [
       "第三步括出从句、插入语、介词短语和非谓语。",
       "第四步按中文顺序重组，不要逐词硬翻。",
     ],
-    task: "每天拆 3 句：1 句阅读句、1 句翻译句、1 句护理科研句。",
+    task: "每天拆 3 句：1 句阅读句、1 句翻译句、1 句研究或社会话题句。",
   },
   {
     title: "阅读主旨题",
@@ -83,7 +83,7 @@ const knowledge = [
     points: [
       "先译主干，再处理定语从句、状语从句、非谓语和插入成分。",
       "被动语态不必都译成“被”，要符合中文表达。",
-      "of 结构要灵活：quality of care 是护理质量，不是护理的质量也可以但不够自然。",
+      "of 结构要灵活：the value of education 可译成“教育的价值”，也可根据语境转成“教育有何价值”。",
     ],
     task: "翻译后检查四件事：否定、比较、因果、指代有没有漏。",
   },
@@ -100,12 +100,116 @@ const knowledge = [
     title: "大作文",
     points: [
       "第一段描述图画或图表，第二段解释原因/意义，第三段建议或总结。",
-      "护理相关素材可准备：老龄化、慢病管理、健康教育、医患沟通、技术辅助护理。",
+      "优先准备通用素材：教育、科技、环境、传统文化、社会责任、合作、创新；健康老龄化只作为补充素材。",
       "表达要稳，不要写自己无法控制的复杂句。",
     ],
     task: "每周背 10 个主题表达，并写 1 篇 160-200 词短文。",
   },
 ];
+
+const generalWordBankRaw = `
+analyze|分析|analyze a problem 分析问题|The author analyzes the causes of social change.|通用核心
+approach|方法；接近|a practical approach 实用方法|A new approach may solve an old problem.|通用核心
+assume|假设；认为|assume responsibility 承担责任|Many people assume that technology is always neutral.|通用核心
+available|可获得的|available resources 可用资源|Reliable information is not always available.|通用核心
+benefit|好处；使受益|long-term benefit 长期好处|Reading brings benefits that are not immediately visible.|通用核心
+concept|概念|basic concept 基本概念|The concept is often misunderstood by the public.|通用核心
+consequence|后果|serious consequence 严重后果|Small decisions may have unexpected consequences.|通用核心
+consistent|一致的|consistent with 与...一致|The result is consistent with earlier studies.|通用核心
+context|背景；语境|historical context 历史背景|Words should be understood in context.|通用核心
+create|创造；造成|create opportunities 创造机会|Education can create opportunities for young people.|通用核心
+decline|下降；衰退|a sharp decline 急剧下降|The report shows a decline in public trust.|通用核心
+define|定义；界定|define a problem 界定问题|The first step is to define the problem clearly.|通用核心
+demand|需求；要求|meet demand 满足需求|The demand for skilled workers is increasing.|通用核心
+derive|获得；源自|derive from 源自|Many modern ideas derive from older traditions.|通用核心
+emerge|出现|emerging trend 新趋势|A new pattern has emerged in recent years.|通用核心
+emphasis|强调|place emphasis on 强调|The article places emphasis on critical thinking.|通用核心
+estimate|估计|rough estimate 粗略估计|Researchers estimate that the cost will rise.|通用核心
+factor|因素|key factor 关键因素|Family background is only one factor in success.|通用核心
+function|功能；作用|social function 社会功能|Libraries still have an important social function.|通用核心
+identify|识别；确认|identify a cause 找出原因|The study identifies several causes of the problem.|通用核心
+indicate|表明|indicate a trend 表明趋势|The data indicate a clear change in behavior.|通用核心
+individual|个人|individual choice 个人选择|Individual choices are shaped by social conditions.|通用核心
+influence|影响|influence behavior 影响行为|Media can influence public opinion.|通用核心
+interpret|解释；理解|interpret evidence 解释证据|Readers should interpret the evidence carefully.|通用核心
+issue|问题；议题|public issue 公共议题|Climate change is not only a scientific issue.|通用核心
+maintain|维持；主张|maintain balance 保持平衡|Schools should maintain a balance between exams and creativity.|通用核心
+method|方法|research method 研究方法|The method used in the study has limitations.|通用核心
+occur|发生|changes occur 变化发生|Errors may occur when people work under pressure.|通用核心
+perspective|角度；观点|from a different perspective 从不同角度|The author views the problem from a historical perspective.|通用核心
+policy|政策|public policy 公共政策|Good policy requires both evidence and public support.|通用核心
+principle|原则|basic principle 基本原则|Fairness is a basic principle of education.|通用核心
+process|过程|learning process 学习过程|Learning is a process rather than a single event.|通用核心
+range|范围|a wide range of 大范围的|The book covers a wide range of topics.|通用核心
+reform|改革|education reform 教育改革|Reform often meets resistance at first.|通用核心
+reflect|反映；思考|reflect a trend 反映趋势|Language often reflects cultural values.|通用核心
+require|需要；要求|require effort 需要努力|Critical thinking requires practice.|通用核心
+response|回应；反应|public response 公众反应|The public response was stronger than expected.|通用核心
+role|角色；作用|play a role 发挥作用|Parents play an important role in children's reading habits.|通用核心
+shift|转变|a major shift 重大转变|There has been a shift from quantity to quality.|通用核心
+source|来源|source of information 信息来源|The internet is a major source of information.|通用核心
+structure|结构|social structure 社会结构|The structure of the article is clear.|通用核心
+survey|调查|conduct a survey 做调查|The survey reveals changes in reading habits.|通用核心
+tend|倾向于|tend to 倾向于|People tend to remember stories better than numbers.|通用核心
+theory|理论|support a theory 支持理论|The theory explains only part of the phenomenon.|通用核心
+trend|趋势|long-term trend 长期趋势|The trend is likely to continue.|通用核心
+valid|有效的；合理的|valid argument 合理论证|A valid argument must be supported by evidence.|通用核心
+vary|变化；不同|vary from...to... 从...到...不同|Learning styles vary from person to person.|通用核心
+whereas|然而；而|whereas + 对比句|Some people value speed, whereas others value accuracy.|阅读高频
+nevertheless|然而；不过|nevertheless + 转折|The plan is difficult; nevertheless, it is worth trying.|阅读高频
+therefore|因此|therefore + 结论|The evidence is limited; therefore, caution is needed.|阅读高频
+moreover|此外|moreover + 递进|Moreover, the cost may be lower than expected.|阅读高频
+otherwise|否则；另外|otherwise + 结果|Check the source; otherwise, you may accept false information.|阅读高频
+meanwhile|与此同时|meanwhile + 同时|Meanwhile, schools are trying new teaching methods.|阅读高频
+contrast|对比|in contrast 相比之下|In contrast, the second study used a larger sample.|阅读高频
+despite|尽管|despite difficulties 尽管困难|Despite the cost, the project continued.|阅读高频
+although|尽管|although + 从句|Although the data are limited, they are useful.|阅读高频
+unless|除非|unless + 条件|The policy will fail unless people understand it.|阅读高频
+claim|声称；主张|make a claim 提出主张|The author questions the claim that tests measure everything.|阅读高频
+argue|论证；认为|argue that 认为|The passage argues that habits are shaped by environment.|阅读高频
+suggest|表明；建议|suggest that 表明|The results suggest that motivation matters.|阅读高频
+question|质疑|question an assumption 质疑假设|The article questions a common assumption about success.|阅读高频
+undermine|削弱|undermine confidence 削弱信心|Weak evidence may undermine the conclusion.|阅读高频
+reinforce|加强|reinforce a view 强化观点|The example reinforces the author's main point.|阅读高频
+highlight|强调；突出|highlight a problem 突出问题|The report highlights the importance of early education.|阅读高频
+ignore|忽视|ignore evidence 忽视证据|Ignoring evidence can lead to poor decisions.|阅读高频
+overlook|忽略|overlook a factor 忽略因素|The argument overlooks economic pressure.|阅读高频
+assumption|假设|basic assumption 基本假设|The conclusion rests on a questionable assumption.|阅读高频
+alternative|替代方案|alternative explanation 另一种解释|The author offers an alternative explanation.|阅读高频
+innovation|创新|technological innovation 技术创新|Innovation can improve efficiency but also create risks.|社会话题
+efficiency|效率|improve efficiency 提高效率|Digital tools may improve efficiency.|社会话题
+privacy|隐私|protect privacy 保护隐私|Online services raise questions about privacy.|社会话题
+inequality|不平等|reduce inequality 减少不平等|Education can reduce inequality, but not alone.|社会话题
+responsibility|责任|social responsibility 社会责任|Companies have a responsibility to users.|社会话题
+sustainable|可持续的|sustainable development 可持续发展|A sustainable society must consider future generations.|社会话题
+environment|环境|protect the environment 保护环境|Economic growth should not damage the environment.|社会话题
+culture|文化|cultural value 文化价值|Culture influences how people understand success.|社会话题
+tradition|传统|respect tradition 尊重传统|Tradition can coexist with innovation.|社会话题
+creativity|创造力|encourage creativity 鼓励创造力|Schools should encourage creativity, not only memorization.|社会话题
+cooperation|合作|international cooperation 国际合作|Global problems require cooperation.|社会话题
+competition|竞争|fair competition 公平竞争|Competition can motivate people but may also create stress.|社会话题
+opportunity|机会|equal opportunity 平等机会|Education should provide equal opportunity.|社会话题
+challenge|挑战|face a challenge 面对挑战|Young people face many challenges in a changing economy.|社会话题
+adapt|适应|adapt to change 适应变化|Workers need to adapt to new technology.|社会话题
+enhance|提升|enhance ability 提升能力|Reading can enhance critical thinking.|写作高频
+promote|促进|promote development 促进发展|Public libraries promote lifelong learning.|写作高频
+address|处理；解决|address a problem 解决问题|Governments should address the problem early.|写作高频
+ensure|确保|ensure fairness 确保公平|Clear rules can ensure fairness.|写作高频
+improve|改善；提高|improve quality 提高质量|Practice can improve writing skills.|写作高频
+reduce|减少|reduce pressure 减轻压力|Better planning can reduce unnecessary pressure.|写作高频
+increase|增加|increase awareness 提高意识|Education can increase public awareness.|写作高频
+strengthen|加强|strengthen cooperation 加强合作|Communication can strengthen trust.|写作高频
+encourage|鼓励|encourage participation 鼓励参与|Schools should encourage active participation.|写作高频
+discourage|阻止；使泄气|discourage cheating 防止作弊|Fair assessment can discourage dishonest behavior.|写作高频
+effective|有效的|effective measure 有效措施|An effective measure must be practical.|写作高频
+practical|实际的|practical solution 实际方案|A practical solution should consider cost.|写作高频
+essential|必要的|essential skill 必备技能|Communication is an essential skill.|写作高频
+significant|显著的；重要的|significant change 重大变化|The internet has brought significant changes.|写作高频
+considerable|相当大的|considerable progress 相当大进步|Considerable progress has been made.|写作高频
+potential|潜在的|potential risk 潜在风险|New technology has potential risks.|写作高频
+beneficial|有益的|beneficial effect 有益影响|Exercise is beneficial to both body and mind.|写作高频
+detrimental|有害的|detrimental effect 有害影响|Excessive screen time may be detrimental.|写作高频
+`;
 
 const wordBankRaw = `
 clinical|临床的|clinical practice 临床实践|Clinical evidence should guide nursing decisions.|护理医学
@@ -213,7 +317,7 @@ long-term|长期的|long-term care 长期护理|Long-term care requires family s
 short-term|短期的|short-term effect 短期影响|The short-term effect was modest.|科研阅读
 `;
 
-const wordBank = wordBankRaw
+const wordBank = `${generalWordBankRaw}\n${wordBankRaw}`
   .trim()
   .split("\n")
   .map((line) => {
@@ -222,6 +326,120 @@ const wordBank = wordBankRaw
   });
 
 const examples = [
+  {
+    type: "阅读",
+    title: "教育与创造力",
+    passage:
+      "Schools are often judged by test scores, but scores alone cannot show whether students are learning to ask better questions. A classroom that rewards only quick answers may discourage curiosity, while one that allows discussion can help students develop judgment. The point is not to abandon exams, but to prevent exams from becoming the only definition of learning.",
+    question: "What is the main idea of the paragraph?",
+    options: ["Exams should be completely removed from schools.", "Quick answers are always more valuable than discussion.", "Education should not be measured only by test scores.", "Curiosity has little connection with learning."],
+    answer: "C。文章不是反对考试，而是反对把考试当作学习的唯一标准。",
+    analysis: "主旨题抓 but 和 The point is not...but...。正确选项通常概括文章核心，不走极端。",
+  },
+  {
+    type: "阅读",
+    title: "科技与隐私",
+    passage:
+      "Digital services make daily life more convenient, yet they also collect information about users' habits, locations and preferences. The real question is not whether technology should be used, but how its benefits can be enjoyed without giving companies unlimited access to personal data.",
+    question: "The author is mainly concerned with:",
+    options: ["the total rejection of digital services", "the balance between convenience and privacy", "the disappearance of all technology companies", "the need to share more personal data"],
+    answer: "B。作者不是否定技术，而是强调便利和隐私之间的平衡。",
+    analysis: "not whether...but how... 是中心句。考研阅读常把“平衡关系”作为正确答案。",
+  },
+  {
+    type: "阅读",
+    title: "传统文化与创新",
+    passage:
+      "Tradition is sometimes described as the opposite of innovation. In practice, however, new ideas often grow out of older forms. A designer may use traditional patterns in modern products, and a writer may give an old story a new voice. Preserving tradition, therefore, does not necessarily mean resisting change.",
+    question: "What does the paragraph suggest about tradition?",
+    options: ["It can support innovation.", "It must disappear in modern society.", "It prevents all new ideas.", "It is unrelated to creative work."],
+    answer: "A。段落说明传统和创新不是必然对立，传统也可以支持创新。",
+    analysis: "however 和 therefore 后面是关键。does not necessarily mean resisting change 是否定绝对化观点。",
+  },
+  {
+    type: "阅读",
+    title: "研究结论边界",
+    passage:
+      "A survey conducted in one city may reveal important local problems, but it should not be treated as proof of a national trend. The value of such research often lies in raising better questions, not in providing final answers.",
+    question: "What does the author emphasize?",
+    options: ["Local surveys are useless.", "One survey should not be overgeneralized.", "National research is always impossible.", "Questions are less valuable than answers."],
+    answer: "B。作者强调单个城市调查有价值，但不能被过度推广。",
+    analysis: "but it should not be treated as proof of a national trend 是定位句。",
+  },
+  {
+    type: "阅读",
+    title: "工作与适应能力",
+    passage:
+      "As technology changes the workplace, the ability to learn may become more important than the knowledge a worker already has. Facts can become outdated, but the habit of asking questions and adapting to new tools remains valuable.",
+    question: "According to the paragraph, workers should place more emphasis on:",
+    options: ["memorizing fixed facts", "avoiding new tools", "continuous learning", "rejecting technology"],
+    answer: "C。文章强调技术变化下持续学习和适应能力更重要。",
+    analysis: "more important than 和 remains valuable 是判断中心的关键信号。",
+  },
+  {
+    type: "词汇",
+    title: "熟词生义：address",
+    passage: "Governments should address the problem before it becomes more serious.",
+    question: "The word 'address' is closest in meaning to:",
+    options: ["write an address", "deal with", "hide", "measure"],
+    answer: "B。address 在考研阅读里常表示“处理、应对”。",
+    analysis: "address + problem/issue/challenge 基本优先理解为“处理问题”。",
+  },
+  {
+    type: "词汇",
+    title: "核心词：undermine",
+    passage: "Weak evidence may undermine the author's conclusion.",
+    question: "The word 'undermine' is closest in meaning to:",
+    options: ["support", "weaken", "repeat", "describe"],
+    answer: "B。undermine 表示削弱、损害。",
+    analysis: "阅读态度题和论证题常考 undermine/support/reinforce 这类逻辑词。",
+  },
+  {
+    type: "完形",
+    title: "转折逻辑",
+    passage: "Online learning offers flexibility; ___, it also requires strong self-discipline.",
+    question: "Choose the best word for the blank.",
+    options: ["however", "therefore", "similarly", "for example"],
+    answer: "A。前面说灵活，后面说需要自律，是转折补充。",
+    analysis: "完形先判断句间关系，不要先看选项中文。",
+  },
+  {
+    type: "完形",
+    title: "因果逻辑",
+    passage: "The evidence was limited; ___, the researchers avoided making strong claims.",
+    question: "Choose the best word for the blank.",
+    options: ["therefore", "whereas", "meanwhile", "otherwise"],
+    answer: "A。证据有限，所以研究者避免强结论。",
+    analysis: "therefore 后面通常接结果或结论。",
+  },
+  {
+    type: "新题型",
+    title: "句子填空",
+    passage:
+      "Reading is not simply a way to receive information. ___. When readers compare ideas, question assumptions and connect texts with experience, reading becomes a form of thinking.",
+    question: "Which sentence best fits the blank?",
+    options: ["It can also train judgment.", "It has no relation to thought.", "It should be replaced by videos.", "It only benefits publishers."],
+    answer: "A。空后说 compare/question/connect，说明阅读能训练判断力。",
+    analysis: "空格前后都围绕 reading 的功能展开，A 与后文同义衔接。",
+  },
+  {
+    type: "翻译",
+    title: "通用长难句",
+    passage:
+      "Although information is easier to obtain than ever before, the ability to judge its reliability has become increasingly important.",
+    question: "请翻译这句话。",
+    answer: "尽管获取信息比以往任何时候都更容易，但判断信息可靠性的能力变得越来越重要。",
+    analysis: "Although 引导让步；主句是 the ability...has become important；to judge its reliability 修饰 ability。",
+  },
+  {
+    type: "翻译",
+    title: "抽象名词转译",
+    passage:
+      "The value of education lies not only in the knowledge it provides but also in the habits of mind it develops.",
+    question: "请翻译这句话。",
+    answer: "教育的价值不仅在于它提供的知识，也在于它培养的思维习惯。",
+    analysis: "not only...but also... 两部分都要译出；habits of mind 可译为“思维习惯”。",
+  },
   {
     type: "阅读",
     title: "护理质量评价",
@@ -480,10 +698,15 @@ function renderDaySelect() {
 }
 
 function dailyWords(day) {
-  const start = ((day - 1) * 8) % wordBank.length;
-  const newWords = Array.from({ length: 8 }, (_, index) => wordBank[(start + index) % wordBank.length]);
-  const reviewStart = Math.max(0, start - 8);
-  const reviewWords = Array.from({ length: 2 }, (_, index) => wordBank[(reviewStart + index) % wordBank.length]);
+  const supplementCategories = new Set(["护理医学", "科研阅读"]);
+  const generalWords = wordBank.filter((word) => !supplementCategories.has(word.category));
+  const supplementWords = wordBank.filter((word) => supplementCategories.has(word.category));
+  const start = ((day - 1) * 7) % generalWords.length;
+  const newWords = Array.from({ length: 7 }, (_, index) => generalWords[(start + index) % generalWords.length]);
+  const supplement = supplementWords[(day - 1) % supplementWords.length];
+  const reviewStart = Math.max(0, start - 7);
+  const reviewWords = Array.from({ length: 2 }, (_, index) => generalWords[(reviewStart + index) % generalWords.length]);
+  newWords.push({ ...supplement, category: `补充：${supplement.category}` });
   return [...newWords, ...reviewWords.map((word) => ({ ...word, category: `复习：${word.category}` }))];
 }
 
