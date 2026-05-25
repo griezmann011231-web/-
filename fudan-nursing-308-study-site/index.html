@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>复旦护理 308 训练台</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="主导航">
+        <div class="brand">
+          <span class="brand-mark">308</span>
+          <div>
+            <strong>复旦护理训练台</strong>
+            <small>护理综合专业课</small>
+          </div>
+        </div>
+        <nav class="nav-list">
+          <button class="nav-button active" data-view="dashboard">总览</button>
+          <button class="nav-button" data-view="today">今天</button>
+          <button class="nav-button" data-view="plan">30周计划</button>
+          <button class="nav-button" data-view="knowledge">知识点</button>
+          <button class="nav-button" data-view="practice">题型训练</button>
+          <button class="nav-button" data-view="review">复盘</button>
+          <button class="nav-button" data-view="sources">依据</button>
+        </nav>
+        <p class="sidebar-note">
+          以复旦护理学院公开的 308 护理综合大纲为核心。正式报考前请再核对当年招生目录和考试大纲。
+        </p>
+      </aside>
+
+      <main class="main-content">
+        <section id="dashboard" class="view active" aria-labelledby="dashboard-title">
+          <div class="top-band">
+            <div class="hero-copy">
+              <span class="eyebrow">目标：复旦大学护理学院</span>
+              <h1 id="dashboard-title">护理综合专业课训练计划</h1>
+              <p>
+                从 2026-05-25 起按 30 周推进：先完成基础、内科、外科一轮，再做病例分析、选择题速度和整卷模拟。核心目标是把每个疾病按“病因/机制、表现、检查、治疗、护理、健康指导”形成可复述框架。
+              </p>
+              <div class="hero-actions">
+                <button class="primary-action" data-jump="today">看今天任务</button>
+                <button class="secondary-action" data-jump="knowledge">查知识点</button>
+              </div>
+            </div>
+            <figure class="hero-visual">
+              <img src="assets/study-visual.png" alt="护理综合复习视觉图：笔记、医学十字与知识节点" />
+            </figure>
+          </div>
+
+          <div class="metric-grid" id="metricGrid"></div>
+
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">考试结构</span>
+              <h2>308 护理综合怎么拆分</h2>
+            </div>
+            <span class="pill">300 分 / 3 小时</span>
+          </div>
+          <div class="exam-grid" id="examGrid"></div>
+
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">当前节奏</span>
+              <h2>本周训练重心</h2>
+            </div>
+          </div>
+          <div class="focus-card" id="dashboardWeek"></div>
+        </section>
+
+        <section id="today" class="view" aria-labelledby="today-title">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">可执行</span>
+              <h1 id="today-title">今天怎么学</h1>
+            </div>
+            <select id="weekSelector" class="select-control" aria-label="选择周次"></select>
+          </div>
+          <div class="today-grid">
+            <div class="daily-card">
+              <h2>本周目标</h2>
+              <div id="todayFocus"></div>
+            </div>
+            <div class="daily-card accent">
+              <h2>今日三段式</h2>
+              <div id="dailyBlocks"></div>
+            </div>
+          </div>
+          <div class="section-head compact">
+            <div>
+              <span class="eyebrow">强度</span>
+              <h2>按可用时间切换</h2>
+            </div>
+          </div>
+          <div class="mode-grid" id="modeGrid"></div>
+        </section>
+
+        <section id="plan" class="view" aria-labelledby="plan-title">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">路线图</span>
+              <h1 id="plan-title">30 周完整训练计划</h1>
+            </div>
+            <span class="pill" id="completedWeeks">0 / 30 周完成</span>
+          </div>
+          <div class="phase-strip" id="phaseStrip"></div>
+          <div class="week-grid" id="weekGrid"></div>
+        </section>
+
+        <section id="knowledge" class="view" aria-labelledby="knowledge-title">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">大纲知识库</span>
+              <h1 id="knowledge-title">详细知识点</h1>
+            </div>
+          </div>
+          <div class="tool-row">
+            <input id="knowledgeSearch" class="search-input" type="search" placeholder="搜索：如 COPD、无菌、心衰、输血、骨折" />
+            <div class="filter-buttons" role="group" aria-label="知识点筛选">
+              <button class="filter-button active" data-filter="all">全部</button>
+              <button class="filter-button" data-filter="基础">基础</button>
+              <button class="filter-button" data-filter="内科">内科</button>
+              <button class="filter-button" data-filter="外科">外科</button>
+            </div>
+          </div>
+          <div class="knowledge-grid" id="knowledgeGrid"></div>
+        </section>
+
+        <section id="practice" class="view" aria-labelledby="practice-title">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">拿分动作</span>
+              <h1 id="practice-title">题型训练与病例模板</h1>
+            </div>
+          </div>
+          <div class="template-band">
+            <div>
+              <h2>病例分析固定答题顺序</h2>
+              <p>先判断最危险的问题，再写护理诊断和措施，避免只背书名词。</p>
+            </div>
+            <ol id="caseTemplate" class="case-template"></ol>
+          </div>
+          <div class="practice-grid" id="practiceGrid"></div>
+          <div class="section-head compact">
+            <div>
+              <span class="eyebrow">练习题</span>
+              <h2>病例专项题</h2>
+            </div>
+          </div>
+          <div class="case-grid" id="caseGrid"></div>
+        </section>
+
+        <section id="review" class="view" aria-labelledby="review-title">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">复盘</span>
+              <h1 id="review-title">进度与错题本</h1>
+            </div>
+          </div>
+          <div class="review-grid">
+            <div class="progress-panel">
+              <h2>掌握度</h2>
+              <div id="progressSummary"></div>
+            </div>
+            <div class="progress-panel">
+              <h2>下次复盘清单</h2>
+              <ul class="plain-list">
+                <li>今天做错的题，必须标注“错因”：知识空白、审题、选项陷阱、时间不足。</li>
+                <li>病例题每次只改一个维度：诊断是否准、措施是否具体、优先级是否正确。</li>
+                <li>每周日只做两件事：重做错题、更新下周最薄弱的 3 个知识点。</li>
+              </ul>
+            </div>
+          </div>
+          <label class="note-label" for="wrongNote">错题与薄弱点记录</label>
+          <textarea id="wrongNote" class="wrong-note" placeholder="例：COPD 氧疗浓度和机械通气护理容易混；术后并发症要按时间线记。"></textarea>
+        </section>
+
+        <section id="sources" class="view" aria-labelledby="sources-title">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">依据</span>
+              <h1 id="sources-title">信息来源与使用说明</h1>
+            </div>
+          </div>
+          <div class="source-grid" id="sourceGrid"></div>
+          <div class="notice">
+            说明：网页里的训练计划是备考安排，不替代当年复旦大学研究生招生网、复旦护理学院和研招网最终发布的招生目录、考试大纲、考试时间与复试规则。2027 年入学考试的最终信息如有更新，需要按新公告调整。
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <nav class="mobile-nav" aria-label="手机导航">
+      <button class="mobile-nav-button active" data-view="dashboard">总览</button>
+      <button class="mobile-nav-button" data-view="today">今天</button>
+      <button class="mobile-nav-button" data-view="plan">计划</button>
+      <button class="mobile-nav-button" data-view="knowledge">知识</button>
+      <button class="mobile-nav-button" data-view="review">复盘</button>
+    </nav>
+
+    <script src="app.js"></script>
+  </body>
+</html>
