@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>复旦护理学考研公共英语训练台</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="brand">
+        <span>201</span>
+        <div>
+          <strong>护理学考研英语</strong>
+          <small>公共英语 / 201 英语一</small>
+        </div>
+      </div>
+      <nav>
+        <button class="nav active" data-view="home">总览</button>
+        <button class="nav" data-view="daily">每日单词</button>
+        <button class="nav" data-view="knowledge">知识点</button>
+        <button class="nav" data-view="examples">例题库</button>
+        <button class="nav" data-view="writing">写作</button>
+        <button class="nav" data-view="review">复盘</button>
+      </nav>
+      <p>这是护理学考研需要考的公共英语，不是英语专业课。内容围绕 201 英语（一）、护理医学词汇和科研阅读场景。</p>
+    </aside>
+
+    <main>
+      <section id="home" class="view active">
+        <div class="hero">
+          <div>
+            <span class="eyebrow">目标：复旦大学护理学研究生</span>
+            <h1>护理学考研公共英语训练</h1>
+            <p>
+              她考的是护理学，英语是初试里的公共课。这个网站专门训练护理学考研需要的英语一能力：每日单词、长难句、阅读理解、完形、新题型、翻译和写作。例题采用真实考研题型与护理/医学/科研阅读考点改写，避免直接复制历年真题原文。
+            </p>
+            <div class="actions">
+              <button class="primary" data-jump="daily">今天背单词</button>
+              <button class="secondary" data-jump="examples">刷例题</button>
+            </div>
+          </div>
+          <div class="hero-panel">
+            <strong>英语</strong>
+            <span>护理学初试公共课，按 100 分、3 小时的英语一结构训练</span>
+          </div>
+        </div>
+
+        <div class="score-grid" id="scoreGrid"></div>
+
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">30 天滚动</span>
+            <h2>每日训练结构</h2>
+          </div>
+        </div>
+        <div class="routine-grid" id="routineGrid"></div>
+      </section>
+
+      <section id="daily" class="view">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">每日单词</span>
+            <h1>Day <span id="dayLabel">1</span> 单词任务</h1>
+          </div>
+          <select id="daySelect"></select>
+        </div>
+        <div class="daily-layout">
+          <div>
+            <div class="word-grid" id="wordGrid"></div>
+          </div>
+          <aside class="daily-card">
+            <h2>今天怎么背</h2>
+            <ol>
+              <li>先遮住中文，看英文说含义和搭配。</li>
+              <li>再遮住英文，看中文写英文。</li>
+              <li>最后用例句复述，不会的点进红色清单。</li>
+              <li>睡前只复习今天错的词，不重新开新词。</li>
+            </ol>
+          </aside>
+        </div>
+      </section>
+
+      <section id="knowledge" class="view">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">核心知识点</span>
+            <h1>英语一拿分框架</h1>
+          </div>
+        </div>
+        <div class="knowledge-grid" id="knowledgeGrid"></div>
+      </section>
+
+      <section id="examples" class="view">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">真题型训练</span>
+            <h1>详细例题库</h1>
+          </div>
+        </div>
+        <div class="filters">
+          <button class="filter active" data-type="all">全部</button>
+          <button class="filter" data-type="阅读">阅读</button>
+          <button class="filter" data-type="完形">完形</button>
+          <button class="filter" data-type="新题型">新题型</button>
+          <button class="filter" data-type="翻译">翻译</button>
+          <button class="filter" data-type="词汇">词汇</button>
+        </div>
+        <div class="example-grid" id="exampleGrid"></div>
+      </section>
+
+      <section id="writing" class="view">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">作文</span>
+            <h1>小作文与大作文模板</h1>
+          </div>
+        </div>
+        <div class="writing-grid" id="writingGrid"></div>
+      </section>
+
+      <section id="review" class="view">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">复盘</span>
+            <h1>错题与红色单词本</h1>
+          </div>
+        </div>
+        <div class="review-grid">
+          <div class="review-card">
+            <h2>复盘规则</h2>
+            <ul>
+              <li>阅读错题必须写清：定位错、逻辑错、词汇错、选项偷换。</li>
+              <li>翻译错句必须重新拆主干，不只改中文。</li>
+              <li>作文每周只改三个点：结构、语法、替换词。</li>
+              <li>红色单词每天睡前复习，不超过 15 分钟。</li>
+            </ul>
+          </div>
+          <div class="review-card">
+            <label for="notes">错题记录</label>
+            <textarea id="notes" placeholder="例：whereas/nevertheless 容易混；阅读态度题容易把作者谨慎支持看成反对。"></textarea>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav">
+      <button class="bottom active" data-view="home">总览</button>
+      <button class="bottom" data-view="daily">单词</button>
+      <button class="bottom" data-view="knowledge">知识</button>
+      <button class="bottom" data-view="examples">例题</button>
+      <button class="bottom" data-view="writing">作文</button>
+    </nav>
+
+    <script src="app.js"></script>
+  </body>
+</html>
