@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>兄弟懂你行 | 越南兄弟旅行计划</title>
+    <meta
+      name="description"
+      content="兄弟懂你行：越南 9 天旅行网站，包含前期准备、景点、美食、按摩店和预算安排。"
+    />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-elevated="false">
+      <a class="brand" href="#top" aria-label="回到顶部">兄弟懂你行</a>
+      <nav class="desktop-nav" aria-label="主导航">
+        <a href="#prep">准备</a>
+        <a href="#route">路线</a>
+        <a href="#cities">城市</a>
+        <a href="#spa">按摩</a>
+        <a href="#budget">预算</a>
+      </nav>
+      <button class="icon-button menu-button" type="button" aria-label="打开菜单" aria-expanded="false">
+        <i data-lucide="menu"></i>
+      </button>
+    </header>
+
+    <nav class="mobile-nav" aria-label="移动导航" hidden>
+      <a href="#prep">前期准备</a>
+      <a href="#route">每日路线</a>
+      <a href="#cities">景点美食</a>
+      <a href="#spa">按摩店</a>
+      <a href="#budget">预算</a>
+    </nav>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Vietnam boys trip planner</p>
+          <h1 id="hero-title">兄弟懂你行</h1>
+          <p class="hero-copy">
+            9 天越南路线：白天看海湾古城，晚上吃粉喝咖啡，走累了就安排正规按摩。节奏不赶，兄弟之间好商量。
+          </p>
+          <div class="hero-actions">
+            <a class="primary-link" href="#route">
+              <i data-lucide="map"></i>
+              看路线
+            </a>
+            <a class="secondary-link" href="#prep">
+              <i data-lucide="check-square"></i>
+              准备清单
+            </a>
+          </div>
+          <dl class="hero-stats" aria-label="旅行概览">
+            <div>
+              <dt>天数</dt>
+              <dd>9 天</dd>
+            </div>
+            <div>
+              <dt>路线</dt>
+              <dd>北进南出</dd>
+            </div>
+            <div>
+              <dt>节奏</dt>
+              <dd>景点 + 美食 + 放松</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="overview">
+        <div class="section-inner">
+          <div class="overview-grid">
+            <article class="overview-item">
+              <i data-lucide="plane"></i>
+              <h2>北进南出少回头</h2>
+              <p>建议河内入境，胡志明市离境。中间用一次内陆航班到岘港，再飞胡志明市。</p>
+            </article>
+            <article class="overview-item">
+              <i data-lucide="utensils"></i>
+              <h2>每城都有必吃单</h2>
+              <p>河内粉和蛋咖啡，宁平羊肉，岘港海鲜，会安高楼面，西贡法棍和街边小吃。</p>
+            </article>
+            <article class="overview-item">
+              <i data-lucide="waves"></i>
+              <h2>每天留恢复时间</h2>
+              <p>把按摩店放在暴走日、海湾巡航日和飞行日后面，避免越玩越累。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section prep-section" id="prep" aria-labelledby="prep-title">
+        <div class="section-inner split-layout">
+          <div>
+            <p class="section-kicker">Before you go</p>
+            <h2 id="prep-title">前期准备</h2>
+            <p class="section-lead">
+              这里按出发前 30 天到出发当天整理。越南电子签最长 90 天，官方申请页写明处理约 3 个工作日，建议至少提前两周办好。
+            </p>
+          </div>
+          <div class="prep-panel">
+            <div class="checklist-toolbar">
+              <span>准备进度</span>
+              <strong><span id="prep-count">0</span>/12</strong>
+            </div>
+            <div class="checklist" id="checklist">
+              <label><input type="checkbox" /> 护照有效期确认至少 6 个月以上</label>
+              <label><input type="checkbox" /> 申请越南 e-visa，保存登记码和 PDF</label>
+              <label><input type="checkbox" /> 打印 e-visa 和酒店订单，各带一份电子版</label>
+              <label><input type="checkbox" /> 订河内入境、胡志明市离境机票</label>
+              <label><input type="checkbox" /> 预订河内、岘港/会安、胡志明市住宿</label>
+              <label><input type="checkbox" /> 下载 Grab、Google Maps、翻译、汇率 App</label>
+              <label><input type="checkbox" /> 准备 Wise/银行卡 + 少量美元或澳币现金</label>
+              <label><input type="checkbox" /> 购买旅行保险，覆盖摩托/水上活动更好</label>
+              <label><input type="checkbox" /> 准备轻薄衣物、雨具、防晒、拖鞋</label>
+              <label><input type="checkbox" /> 预约第一晚按摩或餐厅，落地后不纠结</label>
+              <label><input type="checkbox" /> 把同行兄弟拉一个共享相册和记账群</label>
+              <label><input type="checkbox" /> 确认按摩店、游船、接送服务的官方联系方式</label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section route-section" id="route" aria-labelledby="route-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="section-kicker">9-day route</p>
+            <h2 id="route-title">每日路线</h2>
+            <p class="section-lead">默认适合第一次去越南：河内 + 宁平/下龙湾 + 岘港会安 + 胡志明市。</p>
+          </div>
+          <div class="timeline" aria-label="9 天行程">
+            <article class="day-card" data-city="hanoi">
+              <span class="day-number">Day 1</span>
+              <h3>河内落地，老城区开局</h3>
+              <p>入住还剑湖或老城区附近。晚上走还剑湖、三十六行街，找一家粉店和蛋咖啡。</p>
+              <ul>
+                <li>吃：Pho Thin / Bun Cha / Egg Coffee</li>
+                <li>放松：Orient Spa 或 O'Spa，先缓解飞行疲劳</li>
+              </ul>
+            </article>
+            <article class="day-card" data-city="hanoi">
+              <span class="day-number">Day 2</span>
+              <h3>河内城市暴走</h3>
+              <p>胡志明陵、文庙、圣约瑟夫大教堂、火车街附近咖啡。晚上去 Ta Hien 一带感受夜生活。</p>
+              <ul>
+                <li>景点：文庙、老城区、水上木偶戏</li>
+                <li>提醒：陵墓类景点要看开放时间，穿着别太随意</li>
+              </ul>
+            </article>
+            <article class="day-card" data-city="ninhbinh">
+              <span class="day-number">Day 3</span>
+              <h3>宁平一日，陆地下龙湾</h3>
+              <p>从河内出发去长安或 Tam Coc 坐船，再去碧洞寺。晚上回河内，吃羊肉或米锅巴。</p>
+              <ul>
+                <li>景点：Trang An / Tam Coc 船游、Bich Dong Pagoda</li>
+                <li>节奏：坐船 2-3 小时，带水和零食</li>
+              </ul>
+            </article>
+            <article class="day-card" data-city="halong">
+              <span class="day-number">Day 4</span>
+              <h3>下龙湾巡航</h3>
+              <p>建议订一晚游船，比当天往返更舒服。下午划皮艇，晚上甲板吹风。</p>
+              <ul>
+                <li>景点：喀斯特海湾、洞穴、漂浮渔村</li>
+                <li>玩法：预算够就选含餐、接送、皮艇的船</li>
+              </ul>
+            </article>
+            <article class="day-card" data-city="danang">
+              <span class="day-number">Day 5</span>
+              <h3>下龙湾回河内，飞岘港</h3>
+              <p>上午返程，下午飞岘港。晚上美溪海滩散步，海鲜晚餐后安排足疗。</p>
+              <ul>
+                <li>吃：海鲜、Mì Quảng、越式烤肉卷</li>
+                <li>放松：Golden Lotus 或 Clover Spa</li>
+              </ul>
+            </article>
+            <article class="day-card" data-city="danang">
+              <span class="day-number">Day 6</span>
+              <h3>岘港：山海桥三件套</h3>
+              <p>上午山茶半岛和灵应寺，下午美溪海滩。周末晚上 9 点可看龙桥喷水喷火。</p>
+              <ul>
+                <li>景点：Son Tra Peninsula、My Khe Beach、Dragon Bridge</li>
+                <li>兄弟玩法：租车比骑摩托更稳，别把安全交给冲动</li>
+              </ul>
+            </article>
+            <article class="day-card" data-city="hoian">
+              <span class="day-number">Day 7</span>
+              <h3>会安古城，灯笼夜</h3>
+              <p>从岘港去会安。白天咖啡、古城、裁缝店，傍晚秋盆河，晚上灯笼街和夜市。</p>
+              <ul>
+                <li>吃：Cao Lầu、White Rose、Bánh Mì Madame Khanh</li>
+                <li>放松：The Castle Spa 或 Net Spa</li>
+              </ul>
+            </article>
+            <article class="day-card" data-city="hcmc">
+              <span class="day-number">Day 8</span>
+              <h3>飞胡志明市，西贡夜生活</h3>
+              <p>上午飞胡志明市。下午统一宫、战争遗迹博物馆、中央邮局，晚上法棍、海鲜螺和酒吧街。</p>
+              <ul>
+                <li>景点：War Remnants Museum、Reunification Palace、Central Post Office</li>
+                <li>放松：Miu Miu Spa 或 Golden Lotus</li>
+              </ul>
+            </article>
+            <article class="day-card" data-city="hcmc">
+              <span class="day-number">Day 9</span>
+              <h3>古芝地道或湄公河，晚上返程</h3>
+              <p>有体力去古芝地道，想轻松就咖啡店 + 市场 + 按摩收尾。留足去机场时间。</p>
+              <ul>
+                <li>备选：Cu Chi Tunnels / Ben Thanh Market / 咖啡店巡游</li>
+                <li>收尾：把现金花完，别最后一天再补大景点</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cities-section" id="cities" aria-labelledby="cities-title">
+        <div class="section-inner">
+          <div class="section-heading with-control">
+            <div>
+              <p class="section-kicker">Spots & food</p>
+              <h2 id="cities-title">景点和美食</h2>
+              <p class="section-lead">用城市筛选看重点，不用每个地方都硬打卡。</p>
+            </div>
+            <div class="segmented-control" role="tablist" aria-label="城市筛选">
+              <button class="active" type="button" data-filter="all">全部</button>
+              <button type="button" data-filter="hanoi">河内</button>
+              <button type="button" data-filter="danang">岘港/会安</button>
+              <button type="button" data-filter="hcmc">胡志明</button>
+            </div>
+          </div>
+
+          <div class="city-grid">
+            <article class="city-card" data-filter-group="hanoi">
+              <img
+                src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80"
+                alt="越南街头与河道风景"
+              />
+              <div class="city-card-body">
+                <span>河内</span>
+                <h3>老城区 + 还剑湖</h3>
+                <p>第一晚就住这里，吃喝都方便。晚上去 Ta Hien 一带，适合兄弟开局。</p>
+                <ul>
+                  <li>必吃：河内粉、Bún Chả、蛋咖啡</li>
+                  <li>别错过：文庙、水上木偶戏、圣约瑟夫大教堂</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="city-card" data-filter-group="hanoi">
+              <img
+                src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80"
+                alt="越南自然风景"
+              />
+              <div class="city-card-body">
+                <span>宁平 / 下龙湾</span>
+                <h3>山水担当</h3>
+                <p>宁平适合一日自然线，下龙湾适合游船住一晚。两个都去，照片基本稳了。</p>
+                <ul>
+                  <li>宁平：Trang An 或 Tam Coc 船游</li>
+                  <li>下龙湾：游船、皮艇、洞穴、日落甲板</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="city-card" data-filter-group="danang">
+              <img
+                src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?auto=format&fit=crop&w=1200&q=80"
+                alt="海边城市与沙滩"
+              />
+              <div class="city-card-body">
+                <span>岘港</span>
+                <h3>海滩 + 龙桥 + 山茶半岛</h3>
+                <p>岘港最适合把节奏放慢。白天海边，下午咖啡，晚上吃海鲜和按摩。</p>
+                <ul>
+                  <li>必去：My Khe Beach、Son Tra、Dragon Bridge</li>
+                  <li>必吃：海鲜、Mì Quảng、Bánh tráng cuốn thịt heo</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="city-card" data-filter-group="danang">
+              <img
+                src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?auto=format&fit=crop&w=1200&q=80"
+                alt="会安古城灯笼"
+              />
+              <div class="city-card-body">
+                <span>会安</span>
+                <h3>古城灯笼夜</h3>
+                <p>会安适合慢慢走。下午逛古城，晚上灯笼和夜市，别把时间全留给拍照。</p>
+                <ul>
+                  <li>必吃：Cao Lầu、White Rose、Mì Quảng</li>
+                  <li>玩法：秋盆河日落船、咖啡店、裁缝店</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="city-card" data-filter-group="hcmc">
+              <img
+                src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=1200&q=80"
+                alt="胡志明市夜景"
+              />
+              <div class="city-card-body">
+                <span>胡志明市</span>
+                <h3>历史 + 夜生活</h3>
+                <p>最后两天放在胡志明市，购物、咖啡、按摩、夜生活都更集中。</p>
+                <ul>
+                  <li>必去：战争遗迹博物馆、统一宫、中央邮局</li>
+                  <li>必吃：Bánh Mì、Cơm Tấm、街边海鲜螺</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="city-card" data-filter-group="hcmc">
+              <img
+                src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=1200&q=80"
+                alt="越南城市街头夜晚"
+              />
+              <div class="city-card-body">
+                <span>胡志明周边</span>
+                <h3>古芝地道 / 湄公河</h3>
+                <p>如果想加一点体验感，古芝地道更硬核；如果想轻松，湄公河半日更松弛。</p>
+                <ul>
+                  <li>古芝：历史向，部分空间狭窄</li>
+                  <li>湄公河：船、果园、乡村体验</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section spa-section" id="spa" aria-labelledby="spa-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="section-kicker">Massage plan</p>
+            <h2 id="spa-title">按摩店安排</h2>
+            <p class="section-lead">
+              只放相对正规、能查到官网或门店信息的店。出发前再确认营业时间、分店状态和预约方式。
+            </p>
+          </div>
+
+          <div class="spa-grid">
+            <article class="spa-card">
+              <div class="spa-meta">河内 | 老城区</div>
+              <h3>Orient Spa Hanoi</h3>
+              <p>适合第一晚落地恢复。官网列出多家还剑湖附近分店，主打足疗、身体按摩、护理套餐。</p>
+              <a href="https://www.orientspahanoi.com/" target="_blank" rel="noreferrer">
+                <i data-lucide="external-link"></i>
+                官网预约
+              </a>
+            </article>
+            <article class="spa-card">
+              <div class="spa-meta">河内 | Hang Bong / Hang Trong</div>
+              <h3>O'Spa</h3>
+              <p>老城区位置集中，官网显示每日 10:00-22:00 营业，适合河内城市暴走后安排。</p>
+              <a href="https://ospa.com.vn/home.htm" target="_blank" rel="noreferrer">
+                <i data-lucide="external-link"></i>
+                查看门店
+              </a>
+            </article>
+            <article class="spa-card">
+              <div class="spa-meta">岘港 / 胡志明市</div>
+              <h3>Golden Lotus Healing World</h3>
+              <p>有岘港和胡志明分店，包含足疗、身体按摩、桑拿类服务，适合多人一起去。</p>
+              <a href="https://goldenlotusspa.vn/en/branches" target="_blank" rel="noreferrer">
+                <i data-lucide="external-link"></i>
+                分店列表
+              </a>
+            </article>
+            <article class="spa-card">
+              <div class="spa-meta">岘港 | 海滩附近</div>
+              <h3>Clover Spa Da Nang</h3>
+              <p>适合岘港海滩日之后放松。先在官网或地图确认最近分店和可预约时段。</p>
+              <a href="https://cloverspa.vn/en" target="_blank" rel="noreferrer">
+                <i data-lucide="external-link"></i>
+                查看官网
+              </a>
+            </article>
+            <article class="spa-card">
+              <div class="spa-meta">会安 | 古城附近</div>
+              <h3>The Castle Spa</h3>
+              <p>官网显示地址在 203 Ly Thuong Kiet，适合会安古城晚饭后做 60-90 分钟按摩。</p>
+              <a href="https://thecastlespa.com/" target="_blank" rel="noreferrer">
+                <i data-lucide="external-link"></i>
+                查看项目
+              </a>
+            </article>
+            <article class="spa-card">
+              <div class="spa-meta">胡志明市 | District 1</div>
+              <h3>Miu Miu Spa</h3>
+              <p>胡志明市经典选择，官网显示 1、2 号分店在 District 1，适合返程前最后一次恢复。</p>
+              <a href="https://miumiuspa.com/" target="_blank" rel="noreferrer">
+                <i data-lucide="external-link"></i>
+                官网信息
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section budget-section" id="budget" aria-labelledby="budget-title">
+        <div class="section-inner budget-layout">
+          <div>
+            <p class="section-kicker">Money check</p>
+            <h2 id="budget-title">预算估算</h2>
+            <p class="section-lead">
+              不含国际机票。默认按舒适但不奢侈：中档住宿、内陆机票、正规按摩、每天正常吃喝。
+            </p>
+            <div class="budget-controls">
+              <label>
+                人数
+                <input id="people-input" type="number" min="1" max="12" value="3" />
+              </label>
+              <label>
+                天数
+                <input id="days-input" type="number" min="3" max="21" value="9" />
+              </label>
+              <label>
+                风格
+                <select id="style-input">
+                  <option value="budget">省钱一点</option>
+                  <option value="comfort" selected>舒服一点</option>
+                  <option value="upgrade">升级一点</option>
+                </select>
+              </label>
+            </div>
+          </div>
+          <div class="budget-result" aria-live="polite">
+            <span>预计每人</span>
+            <strong id="budget-total">A$0</strong>
+            <p id="budget-note">包含住宿、当地交通、餐饮、活动、按摩和 2 段内陆交通。</p>
+            <div class="budget-breakdown">
+              <div><span>住宿</span><strong id="cost-hotel">A$0</strong></div>
+              <div><span>吃喝</span><strong id="cost-food">A$0</strong></div>
+              <div><span>交通</span><strong id="cost-transport">A$0</strong></div>
+              <div><span>活动按摩</span><strong id="cost-activity">A$0</strong></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section rules-section" aria-labelledby="rules-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="section-kicker">Brother rules</p>
+            <h2 id="rules-title">兄弟旅行约法三章</h2>
+          </div>
+          <div class="rules-grid">
+            <article>
+              <i data-lucide="wallet-cards"></i>
+              <h3>统一记账</h3>
+              <p>谁垫付就立刻记，别等最后一天靠记忆算账。</p>
+            </article>
+            <article>
+              <i data-lucide="clock-3"></i>
+              <h3>每天一个硬目标</h3>
+              <p>一个必去景点就够，其他看状态加，旅行不是打卡考试。</p>
+            </article>
+            <article>
+              <i data-lucide="shield-check"></i>
+              <h3>安全优先</h3>
+              <p>夜里少单独行动，骑摩托谨慎，按摩店只走正规门店和官网预约。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section sources-section" aria-labelledby="sources-title">
+        <div class="section-inner">
+          <h2 id="sources-title">信息来源</h2>
+          <p>签证、景点和店铺信息来自官方旅游/移民页面及店铺官网。行程价格仅为规划估算，实际以预订时为准。</p>
+          <div class="source-links">
+            <a href="https://vietnam.travel/plan-your-trip/official-vietnam-evisa-application" target="_blank" rel="noreferrer">越南官方旅游 e-visa 指南</a>
+            <a href="https://evisa.immigration.gov.vn/en_US/web/guest/khai-thi-thuc-dien-tu/cap-thi-thuc-dien-tu" target="_blank" rel="noreferrer">越南移民局 e-visa 申请说明</a>
+            <a href="https://vietnam.travel/things-to-do/11-must-see-attractions-ha-noi" target="_blank" rel="noreferrer">河内景点</a>
+            <a href="https://vietnam.travel/things-to-do/must-visit-places-in-da-nang" target="_blank" rel="noreferrer">岘港景点</a>
+            <a href="https://www.vietnam.travel/things-to-do/top-things-to-do-hoi-an" target="_blank" rel="noreferrer">会安玩法</a>
+            <a href="https://vietnam.travel/things-to-do/10-tourist-spots-not-be-missed-ho-chi-minh-city" target="_blank" rel="noreferrer">胡志明市景点</a>
+            <a href="https://vietnam.travel/things-to-do/what-to-do-in-ha-long-bay" target="_blank" rel="noreferrer">下龙湾玩法</a>
+            <a href="https://vietnam.travel/things-to-do/10-must-do-activities-ninh-binh" target="_blank" rel="noreferrer">宁平玩法</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>兄弟懂你行</span>
+      <p>把行程做轻，把快乐做满。</p>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
